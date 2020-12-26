@@ -1,4 +1,4 @@
-package leetcode.java;
+package leetcode.java.set;
 
 /**
  * Hello world!
