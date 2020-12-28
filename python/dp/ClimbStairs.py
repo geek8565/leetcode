@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 
 import sys
 import os
-from __future__ import print_function
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
