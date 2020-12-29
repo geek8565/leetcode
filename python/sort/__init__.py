@@ -13,6 +13,8 @@ from . import bucketSort
 from . import radixSort
 
 # global functions  全局函数：代码常调用函数
+
+## 都是双层遍历的思路
 # 1.冒泡排序    稳定      n^2
 bubble_sort = bucketSort.bucketSort
 
@@ -22,6 +24,8 @@ selection_sort = selectionSort.selectionSort
 # 3.插入排序    稳定      n^2
 insertion_sort = insertionSort.insertionSort
 
+
+## 都是归并思路？
 # 4.希尔排序    不稳定     n^1.3
 shell_sort = shellSort.shellSort
 
@@ -31,8 +35,14 @@ merge_sort = mergeSort.mergeSort
 # 6.快速排序    不稳定     nlog2n
 quick_sort = quickSort.quickSort
 
+
+## 借助堆数据结构
+
 # 7.堆排序     不稳定     nlog2n
 heap_sort = heapSort.heapSort
+
+
+## 都是桶排序或计数排序
 
 # 8.计数排序    稳定      n+k
 counting_sort = countingSort.countingSort
