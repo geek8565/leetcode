@@ -16,13 +16,15 @@ sys.setdefaultencoding("utf-8")
 最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前。
 
 其实，基数排序也是桶排序的一种新形势；只不过是一种特殊的分通规则
+# 动图参考：https://zhuanlan.zhihu.com/p/73714165
 """
 
 
-
 def radixSort(lis, d):
-    for i in xrange(d):#d轮排序
-        s = [[] for _ in xrange(10)]#因为每一位数字都是0~9，故建立10个桶
+    # d轮排序, 最大的数字有多少位
+    for i in xrange(d):
+        # 分桶：每一位数字都是0~9，故建立10个桶
+        s = [[] for _ in xrange(10)]
         for j in lis:
             s[j/(10**i)%10].append(j)
         lis = [a for b in s for a in b]
