@@ -22,8 +22,11 @@ def countingSort(arr, maxK):
     count = [0 for _ in range(maxK+1)]
     for i in arr:
         count[i] +=1
+    print(count)
+
     for i in range(1, len(count)):
         count[i] +=count[i-1]
+    print(count)
     for i in arr:
         res[count[i]-1] = i
         count[i]-= 1
